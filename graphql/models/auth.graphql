@@ -1,0 +1,46 @@
+union Response = User | JsonType
+type JsonType {
+    message: String
+    code: String
+    data: String
+}
+
+extend type Query {
+
+
+    login(
+        email: String,
+        password: String
+        ): JsonType
+}
+
+extend type Query {
+    check: User @expert @guard
+    logout: JsonType
+}
+
+# @middleware(checks: ["auth:api"])
+
+extend type Mutation {
+    register(
+        name: String!,
+        email: String!,
+        password: String!,
+        phone: Int!,
+        role: String!,
+        ): String
+
+    forgotPassword(
+        email: String!
+    ): JsonType
+
+    resetPassword(
+        email: String!
+        token: String!
+        password: String!
+    ): JsonType
+}
+
+# type Subscription {
+#   newUser: User
+# }

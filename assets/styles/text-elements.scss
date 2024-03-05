@@ -1,0 +1,17 @@
+.page-title {
+  font-family: Telegraf-UltraBold, serif;
+  font-style: normal;
+  color: $text-primary-color;
+  user-select: none;
+  text-align: start;
+
+  @media only screen and (max-width: 1439px) {
+    font-size: 54px;
+    line-height: 57px;
+  }
+
+  @media only screen and (min-width: $desktop-width) {
+    font-size: 72px;
+    line-height: 76px;
+  }
+}

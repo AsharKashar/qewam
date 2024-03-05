@@ -1,0 +1,39 @@
+type StartupDetail {
+    company_name: String
+    phone: Int
+    company_website: String
+    company_details: String
+    stage: String
+    city: String
+    state: String
+    country: String
+    team_size: Int
+    monthly_revenue: Int
+    founded_year: String
+    funds_raised: Int
+    industry: String
+    profile_image_url: String
+    user: User
+}
+
+
+extend type Query {
+    getStartupDetails(id: ID @eq): StartupDetail
+}
+
+extend type Mutation {
+    updateStartupDetails(
+                         company_name: String,
+                         phone: Int,
+                         company_website: String,
+                         company_details: String,
+                         stage: String,
+                         country: String,
+                         team_size: Int,
+                         monthly_revenue: Int,
+                         founded_year: String,
+                         funds_raised: Int,
+                         industry: String,
+                         profile_image_url: String,
+                         ): StartupDetail @startup @guard
+}

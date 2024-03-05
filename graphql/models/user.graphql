@@ -1,0 +1,31 @@
+union Detail = StartupDetail | ExpertDetail
+
+type User {
+    id: ID!
+    email: String
+    role: String
+    created_at: DateTime!
+    updated_at: DateTime!
+    details: Detail
+}
+
+extend type Query {
+    usersAll: [User!]! @all
+    # hello(name: String): String @AddPostfix
+    # getUser(id: ID @eq): User
+}
+
+extend type Query  {
+    getUser(id: ID @eq): User
+}
+
+
+extend type Mutation {
+  createUser(name: String!, email: String!, password: String! @bcrypt): User @create
+  updateUser(id: ID, email: String, password: String): User @update
+  deleteUser(id: ID!): User @delete
+}
+
+# type Subscription {
+#   newUser: User
+# }

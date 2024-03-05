@@ -1,0 +1,29 @@
+type ExpertDetail {
+    name: String
+    phone: Int
+    profession: String
+    bio: String
+    description: String
+    rate_type: String
+    rate: Int
+    currency: String
+    profile_image_url: String
+}
+
+extend type Query {
+    getExpertDetails(id: ID @eq): ExpertDetail
+}
+
+extend type Mutation {
+    updateExpertDetails(
+                         name: String,
+                         phone: Int,
+                         profession: String,
+                         bio: String,
+                         description: String,
+                         rate_type: String,
+                         rate: Int,
+                         currency: String,
+                         profile_image_url: String,
+                         ): ExpertDetail  @expert @guard
+}

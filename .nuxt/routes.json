@@ -1,0 +1,30 @@
+[
+  {
+    "name": "admin",
+    "path": "/admin",
+    "component": "C:\\\\xampp\\\\htdocs\\\\qewam\\\\frontend\\\\pages\\\\admin\\\\index.vue",
+    "chunkName": "pages/admin/index",
+    "_name": "_4c517108"
+  },
+  {
+    "name": "login",
+    "path": "/login",
+    "component": "C:\\\\xampp\\\\htdocs\\\\qewam\\\\frontend\\\\pages\\\\login.vue",
+    "chunkName": "pages/login",
+    "_name": "_88653d40"
+  },
+  {
+    "name": "signup",
+    "path": "/signup",
+    "component": "C:\\\\xampp\\\\htdocs\\\\qewam\\\\frontend\\\\pages\\\\signup.vue",
+    "chunkName": "pages/signup",
+    "_name": "_0a38b7b1"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "C:\\\\xampp\\\\htdocs\\\\qewam\\\\frontend\\\\pages\\\\index.vue",
+    "chunkName": "pages/index",
+    "_name": "_1bb4836e"
+  }
+]
